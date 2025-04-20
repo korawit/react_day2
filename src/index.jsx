@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Buylist from './Buylist';
+import Bmi from './Bmi';
+import Bookstore from './Bookstore';
+import BMICalculator from './BMICalculator';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Bookstore/>
   </React.StrictMode>
 );
 

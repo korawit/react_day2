@@ -1,0 +1,75 @@
+/* Main container to hold book list and cart system */
+.page-container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Align items on opposite sides */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between book list and cart */
+    padding: 20px;
+}
+ 
+/* Book list section */
+.books-container {
+    flex: 3; /* Takes up more space compared to the cart */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+ 
+/* Cart section */
+.cart-container {
+    flex: 1; /* Takes up less space compared to the book list */
+    max-width: 300px; /* Ensure cart doesn't stretch too wide */
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+ 
+/* Title of sections */
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+ 
+/* Individual book card (inherits existing styles from your snippet) */
+.book-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ 
+/* Cart items styling (inherits existing styles from your snippet) */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+ 
+.cart-item:last-child {
+    border-bottom: none;
+}
+ 
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column; /* Stack the book list and cart vertically */
+    }
+ 
+    .cart-container {
+        max-width: 100%; /* Allow cart to take full width */
+    }
+}
