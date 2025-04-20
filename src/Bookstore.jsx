@@ -55,7 +55,7 @@ export default function Bookstore() {
             </div>
             <div className="cart-title">Cart</div>
             <div className="cart-container">
-                {cart.map(b => <div className="cart-item">
+                {cart.map((b,index) => <div key={index} className="cart-item">
                     <div className="book-title-cart">{b.title}</div>
                     <div className="book-price-cart">{b.price}</div>
                 </div>)}
